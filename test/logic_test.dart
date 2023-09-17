@@ -20,7 +20,7 @@ bool validatePinCode({required int pinCode}) {
   RegExp validateLength = RegExp(r".{6,}");
   RegExp isRepeating = RegExp(r"(\d)\1\1+");
   RegExp validateSequential = RegExp(
-      r"012|123|234|345|456|567|678|789|987|876|765|654|543|432|321|210|109");
+      r"012|123|234|345|456|567|678|789|901|987|876|765|654|543|432|321|210|109|098");
   RegExp isRepeatingGroup = RegExp(r"(\d)\1+");
   return validateLength.hasMatch(input) &&
       !isRepeating.hasMatch(input) &&
